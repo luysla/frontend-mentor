@@ -1,29 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap');
+@font-face {
+  font-family: 'Figtree';
+  src: url('./assets/fonts/static/Figtree-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('./assets/fonts/static/Figtree-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
 
 :root {
   --yellow: hsl(47, 88%, 63%);
   --white: hsl(0, 0%, 100%);
   --gray-500: hsl(0, 0%, 42%);
   --gray-950: hsl(0, 0%, 7%);
+  --font-family: "Figtree", sans-serif;
+  --line-height-default: 150%;
 }
 
-main {
+html {
   box-sizing: border-box;
 }
 
 body {
+  background: var(--yellow);
+  font-family: "Figtree", sans-serif;
+  font-size: 15px;
   margin: 0;
   padding: 0;
-  font-family: "Figtree", sans-serif;
-  background: var(--yellow);
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 span {
   display: block;
+}
+
+[class^="typography__text"] {
+  font-family: var(--font-family);
+  line-height: var(--line-height-default);
+}
+
+.typography__text--1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.typography__text--2 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.typography__text--3 {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.typography__text--3-bold {
+  font-size: 0.875rem;
+  font-weight: 800;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding-inline: 16px;
 }
 
 .card {
@@ -33,10 +77,32 @@ span {
   padding: 24px;
   border-radius: 20px;
   max-width: 370px;
+  gap: 24px;
+  border: 1px solid var(--gray-950);
+  box-shadow: 8px 8px 0px 0px var(--gray-950);
 }
 
 .card__image {
+  width: 100%;
   border-radius: 10px;
+}
+
+.card__texts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card__tag {
+  align-self: self-start;
+  color: var(--gray-950);
+  background: var(--yellow);
+  border-radius: 4px;
+  padding: 4px 12px;
+}
+
+.card__date {
+  color: var(--gray-950);
 }
 
 .card__title {
@@ -46,7 +112,27 @@ span {
   font-size: 1.5rem;
 }
 
+.card__title:hover {
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+.card__description {
+  margin: 0;
+  color: var(--gray-500);
+}
+
 .card__user {
   display: flex;
   align-items: center;
+  gap: 12px;
+}
+
+.card__avatar {
+  width: 32px;
+  height: 32px;
+}
+
+.card__author {
+  color: var(--gray-950);
 }
