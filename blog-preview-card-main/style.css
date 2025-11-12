@@ -37,7 +37,7 @@ span {
   display: block;
 }
 
-[class^="typography__text"] {
+[class*="typography__text"] {
   font-family: var(--font-family);
   line-height: var(--line-height-default);
 }
@@ -76,7 +76,7 @@ span {
   background: var(--white);
   padding: 24px;
   border-radius: 20px;
-  max-width: 370px;
+  max-width: 320px;
   gap: 24px;
   border: 1px solid var(--gray-950);
   box-shadow: 8px 8px 0px 0px var(--gray-950);
