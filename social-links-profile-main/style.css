@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  --background: #141414;
+  --card-background: #1F1F1F;
+  --button-background: #333333;
+  --white: #FFF;
+  --green: #ABC658;
+  --gray1: #B0B0B0;
+  --gray2: #ECECEC;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  background-color: var(--background);
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  min-height: 100vh;
+  padding-inline: 16px;
+}
+
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  background-color: var(--card-background);
+  gap: 20px;
+  border-radius: 20px;
+  padding: 20px 40px;
+  max-width: 370px;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card__user-info {
+  text-align: center;
+}
+
+.card__username {
+  color: var(--white);
+  margin-bottom: 5px;
+}
+
+.card__location {
+  color: var(--green);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card__description {
+  color: var(--gray1);
+  font-size: 0.875rem;
+}
+
+.card__links {
+  list-style: none;
+  padding: 0;
+}
+
+.card__link a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-background);
+  text-align: center;
+  margin-bottom: 20px;
+  height: 45px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--gray2);
+}
+
+.card__link a:hover {
+  color: var(--background);
+  background-color: var(--green);
+}
+
+.card__avatar {
+  width: 100px;
+  border-radius: 100%;
+  max-width: 100%;
+}
